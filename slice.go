@@ -47,4 +47,19 @@ func main() {
 	fmt.Println(newSlice2)
 	fmt.Println(newSlice)
 
+	// jika menggunakan aappend ketika capaicty slice penuh, maka akan di buatakan array baru
+
+	formSlice := days[:]
+	toSlice := make([]string, len(formSlice), cap(formSlice))
+	copy(toSlice, formSlice)
+
+	fmt.Println(formSlice)
+	fmt.Println(toSlice)
+
+	iniArray := [...]int{1, 2, 3, 4, 5}
+	iniSlice := []int{1, 2, 3, 4, 5}
+
+	fmt.Println(iniArray)
+	fmt.Println(iniSlice)
+
 }
